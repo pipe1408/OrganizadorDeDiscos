@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="560.0" prefWidth="1041.0" style="-fx-background-color: #D6EAF8;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuPrincipalController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="1080.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Menú">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Home">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/house.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+              <MenuItem mnemonicParsing="false" text="Música">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/music.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Salir">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/door_in.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Pane layoutX="20.0" layoutY="41.0" prefHeight="238.0" prefWidth="1040.0" style="-fx-border-width: 2; -fx-border-color: #85C1E9; -fx-border-radius: 10;">
+         <children>
+            <TextField layoutX="562.0" layoutY="17.0" prefHeight="25.0" prefWidth="454.0" promptText="Buscar discos...." />
+            <ComboBox layoutX="427.0" layoutY="17.0" prefHeight="25.0" prefWidth="120.0" promptText="Filtro" />
+            <TableView layoutX="425.0" layoutY="59.0" prefHeight="162.0" prefWidth="593.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Código" />
+                <TableColumn prefWidth="164.0" text="Nombre" />
+                  <TableColumn prefWidth="144.0" text="Autor" />
+                  <TableColumn prefWidth="55.0" text="Año" />
+                  <TableColumn prefWidth="154.0" text="Intérprete" />
+              </columns>
+            </TableView>
+            <Label layoutX="26.0" layoutY="51.0" text="Código:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField disable="true" layoutX="83.0" layoutY="47.0" prefHeight="25.0" prefWidth="106.0" />
+            <Label layoutX="23.0" layoutY="83.0" text="Nombre:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField disable="true" layoutX="83.0" layoutY="79.0" prefHeight="25.0" prefWidth="213.0" />
+            <Label layoutX="37.0" layoutY="153.0" text="Autor:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField disable="true" layoutX="81.0" layoutY="149.0" prefHeight="25.0" prefWidth="213.0" />
+            <Label layoutX="14.0" layoutY="185.0" text="Intérprete:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField disable="true" layoutX="81.0" layoutY="181.0" prefHeight="25.0" prefWidth="169.0" />
+            <Label layoutX="199.0" layoutY="51.0" text="Año:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField disable="true" layoutX="238.0" layoutY="47.0" prefHeight="25.0" prefWidth="58.0" />
+            <CheckBox disable="true" layoutX="85.0" layoutY="119.0" mnemonicParsing="false" text="Único autor">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox disable="true" layoutX="181.0" layoutY="119.0" mnemonicParsing="false" text="Único intérprete">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </CheckBox>
+            <Label layoutX="20.0" layoutY="17.0" prefHeight="25.0" prefWidth="339.0" style="-fx-alignment: center;" text="DISCOS" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/cd.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Button layoutX="319.0" layoutY="71.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Nuevo" textFill="#0060cd" />
+            <Button disable="true" layoutX="318.0" layoutY="107.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Guardar" />
+            <Button disable="true" layoutX="318.0" layoutY="141.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Eliminar" textFill="RED" />
+            <Button disable="true" layoutX="262.0" layoutY="182.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 180;">
+                     <image>
+                        <Image url="@img/arrow_turn_right.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="20.0" layoutY="302.0" prefHeight="238.0" prefWidth="1040.0" style="-fx-border-width: 2; -fx-border-color: #85C1E9; -fx-border-radius: 10;">
+         <children>
+            <TextField layoutX="562.0" layoutY="17.0" prefHeight="25.0" prefWidth="454.0" promptText="Buscar canciones..." />
+            <ComboBox layoutX="427.0" layoutY="17.0" prefHeight="25.0" prefWidth="120.0" promptText="Filtro" />
+            <TableView layoutX="427.0" layoutY="62.0" prefHeight="162.0" prefWidth="593.0">
+               <columns>
+                  <TableColumn editable="false" prefWidth="75.0" sortable="false" text="Disco" />
+                  <TableColumn prefWidth="159.0" text="Nombre" />
+                  <TableColumn prefWidth="204.0" text="Autor" />
+                  <TableColumn prefWidth="154.0" text="Intérprete" />
+               </columns>
+            </TableView>
+            <Label layoutX="18.0" layoutY="17.0" prefHeight="25.0" prefWidth="339.0" style="-fx-alignment: center;" text="CANCIONES" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/music.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="23.0" layoutY="69.0" text="Código:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField disable="true" layoutX="81.0" layoutY="65.0" prefHeight="25.0" prefWidth="213.0" />
+            <Label layoutX="19.0" layoutY="101.0" text="Nombre:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField disable="true" layoutX="81.0" layoutY="97.0" prefHeight="25.0" prefWidth="213.0" />
+            <Label layoutX="37.0" layoutY="136.0" text="Autor:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField disable="true" layoutX="81.0" layoutY="132.0" prefHeight="25.0" prefWidth="213.0" />
+            <Label layoutX="14.0" layoutY="168.0" text="Intérprete:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField disable="true" layoutX="81.0" layoutY="164.0" prefHeight="25.0" prefWidth="169.0" />
+            <Button layoutX="320.0" layoutY="74.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Nuevo" textFill="#0060cd" />
+            <Button disable="true" layoutX="320.0" layoutY="107.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Guardar" />
+            <Button disable="true" layoutX="320.0" layoutY="141.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Eliminar" textFill="RED" />
+            <Button disable="true" layoutX="262.0" layoutY="165.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 180;">
+                     <image>
+                        <Image url="@img/arrow_turn_right.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
