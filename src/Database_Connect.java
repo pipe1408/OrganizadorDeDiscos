@@ -1,6 +1,7 @@
 import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 
 public class Database_Connect {
 
@@ -12,12 +13,16 @@ public class Database_Connect {
 
         if (!url.exists()) {
             try {
-                String driver = "org.apache.derby.jdbc.driver.EmbeddedDriver";
+                String driver = "org.apache.derby.jdbc.EmbeddedDriver";
                 Class.forName(driver);
-                String db_con = "jdbc:derby:" + db_dir + ";create=true";
-                con = DriverManager.getConnection(db_con);
-
-                //String tabla_discos = "CREATE TABLE world";
+                String db_url = "jdbc:derby:" + db_dir + ";create=true";
+                con = DriverManager.getConnection(db_url);
+                //String tabla_discos = "";
+                //PreparedStatement ps = con.prepareStatement(tabla_discos);
+                //ps.execute();
+                //ps.close();
+                con.close();
+                return con;
             }catch(Exception exception) {
                 System.out.println("Error: " + exception);
             }
